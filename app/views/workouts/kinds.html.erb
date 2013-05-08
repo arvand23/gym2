@@ -1,0 +1,34 @@
+<!--<p> "The body type selected is <%= @bodytype %> </p>
+<p> "The goal selected is <%= @goal %> </p>-->
+
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Workout Plan</th>
+      <th>Change in Bodyfat %</th>
+      <th>Change in Weight</th>
+      <th>Body Type</th>
+      <!--<th><%=t '.actions', :default => t("helpers.actions") %></th>-->
+    </tr>
+  </thead>
+  <tbody>
+    <% @filtered_workouts.each do |workout| %>
+      <tr>
+        <td><%= link_to workout.title, workout_path(workout) %></td>
+        <td><%= workout.bfafter - workout.bfbefore %></td>
+        <td><%= workout.weightafter - workout.weightbefore %></td>
+        <td><%= workout.bodytype %></td>
+        <!--<td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_workout_path(workout), :class => 'btn btn-mini' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      workout_path(workout),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>-->
+      </tr>
+    <% end %>
+  </tbody>
+</table>

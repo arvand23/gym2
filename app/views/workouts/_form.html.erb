@@ -1,0 +1,50 @@
+<%= form_for @workout, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :title, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :title, :placeholder => "K Davis 3000", :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :plan, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :plan, :placeholder => "Day 1: Bench Press * 3 sets, 8 reps each...", :class => 'text_area' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label "Bodyfat % (before)", :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :bfbefore, :placeholder => "10", :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label "Bodyfat % (after)", :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :bfafter, :placeholder => "14", :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label "Weight lbs (before)", :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :weightbefore, :placeholder => "165", :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label "Weight lbs (after)", :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :weightafter, :placeholder => "179", :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label "Body Type", :class => 'control-label' %>
+    <div class="controls">
+      <%= f.select :bodytype, options_for_select([["Ectomorph"], ["Ecto-mesomorph"], ["Meso-ectomorph"], ["Mesomorph"], ["Meso-endomorph"], ["Endo-mesomorph"], ["Endomorph"]])%>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                workouts_path, :class => 'btn' %>
+  </div>
+<% end %>
