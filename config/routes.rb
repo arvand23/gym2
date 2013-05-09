@@ -1,4 +1,6 @@
 Gym2::Application.routes.draw do
+  devise_for :users
+
   resources :workouts do 
   	collection {
 	  	get "kinds"
