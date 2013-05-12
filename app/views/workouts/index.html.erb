@@ -5,7 +5,8 @@
 
 <%- model_class = Workout -%>
 <div class="page-header">
-  <center><h1>4 Week Workout Plans</h1></center>
+  <center><h1>4 Week Workout Plans</h1>
+  			<h4>...Because it takes 4 weeks to form a life-changing habit.</h4></center>
 </div>
 
 
@@ -16,30 +17,29 @@
 <div id="this-carousel-id" class="carousel slide"><!-- class of slide for animation -->
   <div class="carousel-inner">
     <div class="item active"><!-- class of active since it's the first item -->
-      <img src="http://storeplay.com.au/assets/1/gym.jpg" alt="" />
+      <img src="http://www.spiaggiarimini.net/wp-content/themes/spiaggiarimini/images/top-giovani.jpg" alt="" />
       <div class="carousel-caption">
-        <p><font color="white"><h4>Metric-Driven Workout Plans</h4>
-         Kablamo!!!
+        <p><font color="white"><h4>Workout Plans Based on Your Body Type</h4>
         </font color></p>
       </div>
     </div>
     <div class="item">
       <img src="http://www.alexanderhotel.it/uploads/albums/album_23/resize_med/bike%20holiday.jpg" alt="" />
       <div class="carousel-caption">
-        <p><h4><font color="white">The Perfect Workout Plan</h4></font color></p>
+        <p><h4><font color="white">Workout Plans from Real People</h4></font color></p>
       </div>
     </div>
     <div class="item">
-      <img src="http://www.hotelplacedarmes.com/image/1/1200/480/uploads/slideshow/gym.jpg" alt="" />
+      <img src="http://storeplay.com.au/assets/1/gym.jpg" alt="" />
       <div class="carousel-caption">
-        <p><h4><font color="white">POW!</h4></font color></p>
+        <p><h4><font color="white">See Results in 4 Weeks</h4></font color></p>
       </div>
     </div>
   </div><!-- /.carousel-inner -->
   <!--  Next and Previous controls below
         href values must reference the id for this carousel -->
-    <a class="carousel-control left" href="#this-carousel-id" data-slide="prev">&lsaquo;</a>
-    <a class="carousel-control right" href="#this-carousel-id" data-slide="next">&rsaquo;</a>
+    <a class="carousel-control left" href="#this-carousel-id" data-slide="prev"><h4>&lsaquo;</h4></a>
+    <a class="carousel-control right" href="#this-carousel-id" data-slide="next"><h4>&rsaquo;</h4></a>
 </div><!-- /.carousel -->
 
 <center>
@@ -48,8 +48,8 @@
 	<div class="control-group">
 		<%= label_tag %>
 		<div class="controls">My body type is
-		  <%= select_tag :booty, options_for_select([["Ectomorph"], ["Ecto-mesomorph"], ["Meso-ectomorph"], ["Mesomorph"], ["Meso-endomorph"], ["Endo-mesomorph"], ["Endomorph"]])%>
-		  and I want to  <%= select_tag :goal, options_for_select(["Lose fat", "Gain muscle"])%>
+		  <%= select_tag :booty, options_for_select([["Ectomorph"], ["Ecto-mesomorph"], ["Mesomorph"], ["Meso-endomorph"], ["Endomorph"]])%>
+		  <a href="http://unrestrainedconfessions.files.wordpress.com/2010/01/somatotypes10sitp8.jpg" target="_blank">(Huh?)</a> and I want to  <%= select_tag :goal, options_for_select(["Lose fat", "Gain muscle"])%>.
 		</div>
 	</div>
 	<%= submit_tag 'Find My Workout!', :class => 'btn btn-large btn-primary' %>
